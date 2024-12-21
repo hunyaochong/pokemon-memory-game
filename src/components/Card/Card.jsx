@@ -1,8 +1,12 @@
 import React from "react";
-import "./Card.css";
+import "./card.css";
 
 function Card() {
-  return <div></div>;
+  return (
+    <div className="card">
+      <img src="" alt="" />
+    </div>
+  );
 }
 
 export default Card;

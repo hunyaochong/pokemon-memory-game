@@ -3,18 +3,18 @@ import { FIRST_GEN, NUM_OF_POKEMONS } from "./constants";
 async function loadPokemons() {
   /* 
     pokemonArtworkUrl = [
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png",
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/16.png",
+    {name: "pikachu", artwork: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"},
+    {name: "gastly", artwork: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png"},
     ....
     ]
-    */
+  */
   const response = await fetch("https://pokeapi.co/api/v2/generation");
 
   if (response.ok) {
     const pokemonGenerationData = await response.json();
     const firstGenPokemonUrl = pokemonGenerationData.results[FIRST_GEN].url;
     const pokemonsArr = await loadPokemonSpecies(firstGenPokemonUrl);
-    const pokemonArtworkUrl = generatePokemons(pokemonsArr);
+    const pokemonArtworkUrl = await generatePokemons(pokemonsArr);
 
     return pokemonArtworkUrl;
   } else {
@@ -34,30 +34,32 @@ async function loadPokemonSpecies(url) {
   }
 }
 
-function generatePokemons(pokemonsArr) {
+async function generatePokemons(pokemonsArr) {
   /*
     pokemons = [
     {name: bulbasaur, url: xxxxx},
     {name: bulbasaur, url: xxxxx},
     ]
     */
-  let artworksUrl = [];
+  let pokemonArtworks = [];
 
   const shuffled = pokemonsArr.sort(() => 0.5 - Math.random());
   const selectedPokemons = shuffled.slice(0, NUM_OF_POKEMONS);
 
-  selectedPokemons.forEach((pokemon) => {
-    loadArtwork(pokemon.name, artworksUrl);
-  });
+  for (const pokemon of selectedPokemons) {
+    const artworkUrl = await loadArtwork(pokemon.name);
+    const pokemonArtwork = { name: pokemon.name, artwork: artworkUrl };
+    pokemonArtworks.push(pokemonArtwork);
+  }
 
-  return artworksUrl;
+  return pokemonArtworks;
 }
 
-async function loadArtwork(name, arr) {
+async function loadArtwork(name) {
   const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
   if (response.ok) {
     const pokemonData = await response.json();
-    arr.push(pokemonData.sprites.other["official-artwork"].front_default);
+    return pokemonData.sprites.other["official-artwork"].front_default;
   } else {
     throw new Error(`Error in loading pokemon data`);
   }

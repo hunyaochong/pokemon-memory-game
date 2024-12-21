@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "pokemon_hollownormal";
+  src: url("./assets/pokemon_hollow-webfont.woff2") format("woff2"),
+    url("./assets/pokemon_hollow-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pokemon_solidnormal";
+  src: url("./assets/pokemon_solid-webfont.woff2") format("woff2"),
+    url("./assets/pokemon_solid-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  min-height: 100dvh;
+  overflow-y: scroll;
+
+  --primary-red: hsl(358 72% 44%);
+  --primary-white: hsl(0 0% 100%);
+  --primary-black: hsl(220 23% 3%);
+
+  --font-pokemon-theme: "pokemon_solidnormal";
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-s: 1rem; /* 16px */
+  --font-size-m: 1.25rem; /* 20px */
+  --font-size-l: 1.5rem; /* 24px */
+  --font-size-xl: 2rem; /* 32px */
+
+  --font-color-yellow: hsl(48 100% 62%);
+  --font-color-light-grey: hsl(0 0% 90%);
+
+  --backdrop-filter-card: hsla(0, 0%, 85%, 0.42);
+  --backdrop-filter-blur: blur(50px);
+  --box-shadow-card-primary: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
+  --box-shadow-card-secondary: 0px 10px 20px hsla(0, 0%, 0%, 0.25);
+
+  --background-color-scorecard: hsl(358 54% 50%);
+  --box-shadow-scorecard-primary: 0px 4px 2px hsla(0, 0%, 0%, 0.25);
+
+  --background-img: url(./assets/pokeball_wallpaper.jpg);
+
+  --space-s: 1rem; /* 16px */
+  --space-m: 1.5rem; /* 24px */
+  --space-l: 2rem; /* 32px */
+  --space-xl: 3.5rem; /* 56px */
+
+  --border-radius: 55px;
+}
+
+body {
+  min-height: 100dvh;
+}

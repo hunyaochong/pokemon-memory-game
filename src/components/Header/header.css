@@ -1,0 +1,8 @@
+header {
+  text-align: center;
+  font-family: var(--font-pokemon-theme);
+  font-size: var(--font-size-s);
+  letter-spacing: 0.2rem;
+  color: var(--font-color-yellow);
+  padding-top: var(--space-s);
+}

@@ -1,0 +1,23 @@
+.scoreboard_wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+  > .scoreboard {
+    display: inline-block;
+    border-radius: var(--border-radius);
+    background-color: var(--background-color-scorecard);
+    backdrop-filter: blur(50px);
+    padding: var(--space-s) var(--space-l);
+    box-shadow: var(--box-shadow-scorecard-primary);
+
+    > span {
+      font-family: var(--font-pokemon-theme);
+      color: var(--font-color-light-grey);
+
+      &:last-of-type {
+        margin-left: var(--space-xl);
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.card {
+  min-width: 230px;
+  min-height: 230px;
+  border-radius: var(--border-radius);
+  background-color: var(--backdrop-filter-card);
+  backdrop-filter: var(--backdrop-filter-blur);
+  box-shadow: var(--box-shadow-card-primary), var(--box-shadow-card-secondary);
+}
