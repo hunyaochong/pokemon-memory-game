@@ -15,13 +15,23 @@ function App() {
     ....
     ]
   */
-  const pokemonArtworkUrl = loadPokemons();
+  const [deck, setDeck] = React.useState([]);
+  const [score, setScore] = React.useState(0);
+
+  React.useEffect(() => {
+    async function fetchPokemonArtwork() {
+      const deck = await loadPokemons();
+      setDeck(deck);
+    }
+
+    fetchPokemonArtwork();
+  }, []);
 
   return (
     <div className="wrapper">
       <Header></Header>
-      <ScoreBoard></ScoreBoard>
-      <CardGrid></CardGrid>
+      <ScoreBoard score={score}></ScoreBoard>
+      <CardGrid deck={deck}></CardGrid>
       <PikachuBoop></PikachuBoop>
     </div>
   );

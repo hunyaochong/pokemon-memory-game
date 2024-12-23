@@ -1,10 +1,11 @@
 import React from "react";
 import "./card.css";
 
-function Card() {
+function Card({ imgSrc, imgAlt }) {
+  console.log(imgSrc);
   return (
     <div className="card">
-      <img src="" alt="" />
+      <img src={imgSrc} alt={imgAlt} />
     </div>
   );
 }

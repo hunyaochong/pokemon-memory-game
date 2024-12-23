@@ -1,11 +1,11 @@
 import React from "react";
 import "./scoreboard.css";
 
-function Scoreboard() {
+function Scoreboard({ score }) {
   return (
     <div className="scoreboard_wrapper">
       <div className="scoreboard">
-        <span>score: 1</span>
+        <span>score: {score}</span>
         <span>best: 10</span>
       </div>
     </div>
