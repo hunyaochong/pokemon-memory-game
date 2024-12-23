@@ -35,8 +35,8 @@ html {
 
   --backdrop-filter-card: hsla(0, 0%, 85%, 0.42);
   --backdrop-filter-blur: blur(50px);
-  --box-shadow-card-primary: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
-  --box-shadow-card-secondary: 0px 10px 20px hsla(0, 0%, 0%, 0.25);
+  --box-shadow-card-primary: 0px 4px 4px hsla(0, 0%, 0%, 0.3);
+  --box-shadow-card-secondary: 0px 10px 20px hsla(0, 0%, 0%, 0.1);
 
   --background-color-scorecard: hsl(358 54% 50%);
   --box-shadow-scorecard-primary: 0px 4px 2px hsla(0, 0%, 0%, 0.25);

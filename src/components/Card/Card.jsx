@@ -4,9 +4,9 @@ import "./card.css";
 function Card({ imgSrc, imgAlt }) {
   console.log(imgSrc);
   return (
-    <div className="card">
+    <button className="card">
       <img src={imgSrc} alt={imgAlt} />
-    </div>
+    </button>
   );
 }
 

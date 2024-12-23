@@ -1,7 +1,7 @@
 main {
   width: 80%;
   margin: 0 auto;
-  margin-top: var(--space-l);
+  margin-top: var(--space-xl);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

@@ -1,8 +1,16 @@
 .card {
   min-width: 230px;
   min-height: 230px;
+  border: none;
   border-radius: var(--border-radius);
   background-color: var(--backdrop-filter-card);
   backdrop-filter: var(--backdrop-filter-blur);
   box-shadow: var(--box-shadow-card-primary), var(--box-shadow-card-secondary);
+  cursor: pointer;
+  overflow: clip;
+
+  > img:hover {
+    transform: scale(1.1);
+    transition: transform ease-in-out 300ms;
+  }
 }

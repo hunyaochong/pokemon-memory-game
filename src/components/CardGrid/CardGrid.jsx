@@ -17,7 +17,7 @@ function CardGrid({ deck }) {
   console.log(`Cards in use:`, { cardsInUse });
   return (
     <main>
-      {!!cardsInUse &&
+      {cardsInUse &&
         cardsInUse.map((card) => (
           <Card
             key={crypto.randomUUID()}

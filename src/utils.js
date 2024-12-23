@@ -21,6 +21,7 @@ export const shuffle = (list) => {
   let newArray = [];
 
   if (list.length === 0) return;
+
   for (let i = 0; i < NUM_OF_CARDS; i++) {
     let randNum = Math.floor(Math.random() * arrayCopy.length);
     let splicedItem = arrayCopy.splice(randNum, 1)[0];
