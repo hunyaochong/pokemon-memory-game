@@ -1,11 +1,15 @@
 import React from "react";
 import "./card.css";
 
-function Card({ imgSrc, imgAlt }) {
-  console.log(imgSrc);
+function Card({ pokemonImg, pokemonName, handleSelectedPokemon }) {
   return (
-    <button className="card">
-      <img src={imgSrc} alt={imgAlt} />
+    <button
+      className="card"
+      onClick={() => {
+        handleSelectedPokemon(pokemonName);
+      }}
+    >
+      <img src={pokemonImg} alt={pokemonName} />
     </button>
   );
 }

@@ -1,6 +1,6 @@
 .card {
-  min-width: 230px;
-  min-height: 230px;
+  max-width: 280px;
+  max-height: 280px;
   border: none;
   border-radius: var(--border-radius);
   background-color: var(--backdrop-filter-card);
@@ -8,9 +8,17 @@
   box-shadow: var(--box-shadow-card-primary), var(--box-shadow-card-secondary);
   cursor: pointer;
   overflow: clip;
+  display: flex;
+  justify-content: center;
 
   > img:hover {
     transform: scale(1.1);
-    transition: transform ease-in-out 300ms;
+    transition: transform ease-in-out 250ms;
+  }
+
+  > img {
+    transform: scale(1);
+    transition: transform ease-in-out 600ms;
+    width: 90%;
   }
 }

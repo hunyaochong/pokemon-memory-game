@@ -29,3 +29,9 @@ export const shuffle = (list) => {
   }
   return newArray;
 };
+
+export const checkDistinct = (array) => {
+  const checkSet = new Set(array);
+
+  return checkSet.size === array.length;
+};
