@@ -21,7 +21,6 @@ function App() {
   const [score, setScore] = React.useState(0);
   const [bestScore, setBestScore] = React.useState(0);
   const [selectedPokemon, setSelectedPokemon] = React.useState([]);
-  // const pokemonListLen = selectedPokemon.length;
 
   function handleSelectedPokemon(name) {
     const nextSelectedPokemon = [...selectedPokemon, name];
@@ -48,15 +47,13 @@ function App() {
 
   React.useEffect(() => {
     function handleScore() {
-      console.log({ selectedPokemon });
-      if (selectedPokemon.length === 0) {
-        return;
-      }
+      if (selectedPokemon.length === 0) return;
+
       if (checkDistinct(selectedPokemon)) {
         setScore((currentScore) => currentScore + 1);
       } else {
         setScore(0);
-        setBestScore(score);
+        if (score > bestScore) setBestScore(score);
         setSelectedPokemon([]);
       }
     }

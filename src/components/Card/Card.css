@@ -1,6 +1,6 @@
 .card {
-  max-width: 280px;
-  max-height: 280px;
+  min-width: 487px;
+  min-height: 429.5px;
   border: none;
   border-radius: var(--border-radius);
   background-color: var(--backdrop-filter-card);

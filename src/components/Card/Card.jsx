@@ -4,12 +4,12 @@ import "./card.css";
 function Card({ pokemonImg, pokemonName, handleSelectedPokemon }) {
   return (
     <button
-      className="card"
+      className="card blur-load"
       onClick={() => {
         handleSelectedPokemon(pokemonName);
       }}
     >
-      <img src={pokemonImg} alt={pokemonName} />
+      <img src={pokemonImg} alt={pokemonName} loading="lazy" />
     </button>
   );
 }
