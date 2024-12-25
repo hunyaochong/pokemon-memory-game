@@ -1,6 +1,6 @@
 import React from "react";
 import pikachuSvg from "../../assets/pikachu.svg";
-import "./pikachu_boop.css";
+import "./PikachuBoop.css";
 
 function PikachuBoop() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import "./scoreboard.css";
+import "./Scoreboard.css";
 
 function Scoreboard({ score, bestScore }) {
   return (
