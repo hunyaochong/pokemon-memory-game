@@ -1,11 +1,13 @@
 import React from "react";
 import "./App.css";
 import Header from "../Header";
+import AudioButton from "../AudioButton";
 import ScoreBoard from "../Scoreboard";
 import CardGrid from "../CardGrid";
 import PikachuBoop from "../PikachuBoop";
 import loadPokemons from "../../pokemonGenerator";
 import { shuffle, checkDistinct } from "../../utils";
+import pokemonMusic from "../../assets/pokemon.mp3";
 
 function App() {
   /* 

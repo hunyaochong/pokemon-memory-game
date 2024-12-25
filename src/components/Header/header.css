@@ -5,14 +5,4 @@ header {
   letter-spacing: 0.2rem;
   color: var(--font-color-yellow);
   padding-top: var(--space-s);
-  position: relative;
-}
-
-.music_button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: var(--space-m);
-  right: 10%;
 }

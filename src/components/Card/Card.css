@@ -1,6 +1,10 @@
 .card {
-  min-width: 487px;
-  min-height: 429.5px;
+  flex: 1;
+  flex-wrap: wrap;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 375px;
+  max-height: 375px;
   border: none;
   border-radius: var(--border-radius);
   background-color: var(--backdrop-filter-card);
@@ -10,6 +14,7 @@
   overflow: clip;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   > img:hover {
     transform: scale(1.1);
@@ -17,8 +22,26 @@
   }
 
   > img {
+    object-fit: cover;
+    object-position: center;
+    width: 80%;
     transform: scale(1);
     transition: transform ease-in-out 600ms;
-    width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  .card {
+    min-width: 125px;
+    min-height: 125px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .card {
+    min-width: 250px;
+    min-height: 250px;
+    border-radius: 40px;
   }
 }

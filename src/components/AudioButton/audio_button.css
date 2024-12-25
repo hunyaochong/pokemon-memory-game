@@ -1,0 +1,8 @@
+.music_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: var(--space-m);
+  right: 10%;
+}

@@ -6,3 +6,9 @@ main {
   flex-wrap: wrap;
   gap: 60px;
 }
+
+@media (max-width: 550px) {
+  main {
+    gap: 20px;
+  }
+}
