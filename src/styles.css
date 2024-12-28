@@ -60,7 +60,8 @@
 
 main {
   width: 80%;
-  margin: var(--space-xl) auto;
+  padding: var(--space-xl) 0;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
